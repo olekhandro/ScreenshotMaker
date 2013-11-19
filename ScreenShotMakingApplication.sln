@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenShotApp", "ScreenShotApp\ScreenShotApp.csproj", "{62105978-14A2-4F3F-A658-46B2973E02F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenshotApp", "ScreenShotApp\ScreenshotApp.csproj", "{62105978-14A2-4F3F-A658-46B2973E02F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenshotMakerLibrary", "ScreenshotMakerLibrary\ScreenshotMakerLibrary.csproj", "{154D6FF1-C210-4C28-8D42-23668BC51550}"
 EndProject

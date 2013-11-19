@@ -1,4 +1,4 @@
-﻿namespace ScreenShotApp
+﻿namespace ScreenShotApp.Forms
 {
     partial class MainForm
     {
