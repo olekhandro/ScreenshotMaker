@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class table="users" name="MySQL.Domain.User, MySQL" lazy="false">
+    <id name="Id" unsaved-value="0" type="long" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="FName" column="fname" not-null="true"></property>
+    <property name="LName" column="lname" not-null="true"></property>
+    <property name="Email" column="email" not-null="true"></property>
+    <property name="Pass" column="pass" not-null="true"></property>
+    <property name="Active" column="active" not-null="true"></property>
+    <property name="Version" column="version" not-null="true"></property>
+  </class>
+</hibernate-mapping>

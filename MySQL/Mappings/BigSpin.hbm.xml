@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class table="bigspin" name="MySQL.Domain.BigSpin, MySQL" lazy="false">
+    <id name="Id" unsaved-value="0" type="long" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="Theme" column="theme" not-null="true"></property>
+    <property name="SpinSubject" column="spinsubject" not-null="true"></property>
+    <property name="SpinPost" column="spinpost" not-null="true"></property>
+  </class>
+</hibernate-mapping>

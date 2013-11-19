@@ -1,0 +1,26 @@
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\bin\Debug\MySQL.dll
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\bin\Debug\MySQL.pdb
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\bin\Debug\Iesi.Collections.dll
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\bin\Debug\NHibernate.dll
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\bin\Debug\Iesi.Collections.pdb
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\bin\Debug\Iesi.Collections.xml
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\bin\Debug\NHibernate.pdb
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\bin\Debug\NHibernate.xml
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\obj\Debug\MySQL.dll
+C:\Users\1\documents\visual studio 2010\Projects\DatabaseConverter\MySQL\obj\Debug\MySQL.pdb
+F:\DatabaseConverter\MySQL\obj\Debug\ResolveAssemblyReference.cache
+F:\DatabaseConverter\MySQL\obj\Debug\MySQL.dll
+F:\DatabaseConverter\MySQL\obj\Debug\MySQL.pdb
+F:\DatabaseConverter\MySQL\bin\Debug\MySQL.dll
+F:\DatabaseConverter\MySQL\bin\Debug\MySQL.pdb
+C:\Users\a.zakharov\Documents\Visual Studio 2010\Projects\WordPressBotApp\MySQL\bin\Debug\MySQL.dll
+C:\Users\a.zakharov\Documents\Visual Studio 2010\Projects\WordPressBotApp\MySQL\bin\Debug\MySQL.pdb
+C:\Users\a.zakharov\Documents\Visual Studio 2010\Projects\WordPressBotApp\MySQL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\a.zakharov\Documents\Visual Studio 2010\Projects\WordPressBotApp\MySQL\obj\Debug\MySQL.dll
+C:\Users\a.zakharov\Documents\Visual Studio 2010\Projects\WordPressBotApp\MySQL\obj\Debug\MySQL.pdb
+F:\WordPressBotApp\MySQL\bin\Debug\MySQL.dll
+F:\WordPressBotApp\MySQL\bin\Debug\MySQL.pdb
+F:\WordPressBotApp\MySQL\obj\Debug\ResolveAssemblyReference.cache
+F:\WordPressBotApp\MySQL\obj\Debug\MySQL.dll
+F:\WordPressBotApp\MySQL\obj\Debug\MySQL.pdb

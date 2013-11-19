@@ -1,0 +1,9 @@
+C:\Users\A.Zakharov\Documents\GitHub\ScreenShotMakingApplication\ScreenshotMakerLibrary\bin\Debug\ScreenshotMakerLibrary.dll
+C:\Users\A.Zakharov\Documents\GitHub\ScreenShotMakingApplication\ScreenshotMakerLibrary\bin\Debug\ScreenshotMakerLibrary.pdb
+C:\Users\A.Zakharov\Documents\GitHub\ScreenShotMakingApplication\ScreenshotMakerLibrary\bin\Debug\Iesi.Collections.dll
+C:\Users\A.Zakharov\Documents\GitHub\ScreenShotMakingApplication\ScreenshotMakerLibrary\bin\Debug\MySQL.dll
+C:\Users\A.Zakharov\Documents\GitHub\ScreenShotMakingApplication\ScreenshotMakerLibrary\bin\Debug\NHibernate.dll
+C:\Users\A.Zakharov\Documents\GitHub\ScreenShotMakingApplication\ScreenshotMakerLibrary\bin\Debug\MySQL.pdb
+C:\Users\A.Zakharov\Documents\GitHub\ScreenShotMakingApplication\ScreenshotMakerLibrary\obj\Debug\ScreenshotMakerLibrary.csprojResolveAssemblyReference.cache
+C:\Users\A.Zakharov\Documents\GitHub\ScreenShotMakingApplication\ScreenshotMakerLibrary\obj\Debug\ScreenshotMakerLibrary.dll
+C:\Users\A.Zakharov\Documents\GitHub\ScreenShotMakingApplication\ScreenshotMakerLibrary\obj\Debug\ScreenshotMakerLibrary.pdb

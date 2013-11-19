@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class table="users" name="ScreenshotMakerLibrary.Domain.User, ScreenshotMakerLibrary" lazy="false">
+    <id name="Id" unsaved-value="0" type="long" column="user_id">
+      <generator class="identity" />
+    </id>
+    <property name="Username" column="username" not-null="true"></property>
+    <property name="Password" column="password" not-null="true"></property>
+  </class>
+</hibernate-mapping>
