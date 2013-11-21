@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class table="jobstask_projects" name="ScreenshotMakerLibrary.Domain.Project, ScreenshotMakerLibrary" lazy="false">
+    <id name="Id" unsaved-value="0" type="long" column="id">
+      <generator class="identity" />
+    </id>
+    <property name="ProjectTitle" column="project" not-null="true"></property>
+    <property name="Company" column="company" not-null="true"></property>
+
+    <set name="Users" table="josbstack_user_project" lazy="false">
+      <key column="project_id" />
+      <many-to-many class="ScreenshotMakerLibrary.Domain.User, ScreenshotMakerLibrary" column="user_id" />
+    </set>
+  </class>
+</hibernate-mapping>

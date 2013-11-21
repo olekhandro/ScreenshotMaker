@@ -18,8 +18,10 @@ namespace ScreenShotApp.Forms
             }
             else
             {
-                if (Program.MySqlBroker.Login(usernameTBox.Text, passwordTBox.Text))
+                var user = Program.MySqlBroker.Login(usernameTBox.Text, passwordTBox.Text);
+                if (user !=null)
                 {
+                    Program.CurrentUser = user;
                     DialogResult= DialogResult.OK;
                 }
             }
