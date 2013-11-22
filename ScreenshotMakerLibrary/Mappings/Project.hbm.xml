@@ -7,7 +7,7 @@
     <property name="ProjectTitle" column="project" not-null="true"></property>
     <property name="Company" column="company" not-null="true"></property>
 
-    <set name="Users" table="josbstack_user_project" lazy="false">
+    <set name="Users" table="josbtask_user_project" lazy="false">
       <key column="project_id" />
       <many-to-many class="ScreenshotMakerLibrary.Domain.User, ScreenshotMakerLibrary" column="user_id" />
     </set>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
-  <class table="jobstask_user" name="ScreenshotMakerLibrary.Domain.Screenshot, ScreenshotMakerLibrary" lazy="false">
+  <class table="jobstask_screenshots  " name="ScreenshotMakerLibrary.Domain.Screenshot, ScreenshotMakerLibrary" lazy="false">
     <id name="Id" unsaved-value="0" type="long" column="screenshot_id">
       <generator class="identity" />
     </id>

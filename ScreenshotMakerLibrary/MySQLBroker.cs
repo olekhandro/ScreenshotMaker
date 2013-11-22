@@ -20,5 +20,13 @@ namespace ScreenshotMakerLibrary
                 return null;
             }
         }
+
+        public void Save(Screenshot screenshot)
+        {
+            using (var dc = new DataContext())
+            {
+                dc.Save(screenshot);
+            }
+        }
     }
 }
