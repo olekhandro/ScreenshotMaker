@@ -8,7 +8,7 @@
     <property name="Password" column="password" not-null="true"></property>
 
 
-    <set name="Projects" table="josbtask_user_project" lazy="false">
+    <set name="Projects" table="jobstask_user_project" lazy="false">
       <key column="user_id" />
       <many-to-many class="ScreenshotMakerLibrary.Domain.Project, ScreenshotMakerLibrary" column="project_id" />
     </set>
