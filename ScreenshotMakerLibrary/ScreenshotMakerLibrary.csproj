@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BytesRoad.Net.Ftp">
+      <HintPath>..\Libs\BytesRoad.Net.Ftp.dll</HintPath>
+    </Reference>
+    <Reference Include="BytesRoad.Net.Sockets">
+      <HintPath>..\Libs\BytesRoad.Net.Sockets.dll</HintPath>
+    </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>..\Libs\Iesi.Collections.dll</HintPath>
     </Reference>
@@ -59,6 +65,7 @@
     <Compile Include="Domain\Identifiable.cs" />
     <Compile Include="Domain\Project.cs" />
     <Compile Include="Domain\Screenshot.cs" />
+    <Compile Include="FTPManager.cs" />
     <Compile Include="MySQLBroker.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="ScreenshotManagerClass.cs" />

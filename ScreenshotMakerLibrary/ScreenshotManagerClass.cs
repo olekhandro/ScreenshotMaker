@@ -53,6 +53,8 @@ namespace ScreenshotMakerLibrary
                 screenshotEntity.Project = CurrentProject;
                 screenshotEntity.User = CurrentUser;
                 LastSavedScreenshot = screenshot;
+                screenshot.Save(Application.StartupPath+@"\"+DateTime.Now.Year+DateTime.Now.Month+DateTime.Now.Day+
+                    DateTime.Now.Hour+DateTime.Now.Minute+".jpg", ImageFormat.Jpeg);
                 CurrentBroker.Save(screenshotEntity);
                 OnScreenshotUploaded(null, EventArgs.Empty);
             } 
