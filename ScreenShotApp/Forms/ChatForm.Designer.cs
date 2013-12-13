@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.projectsCBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.userCBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.projectsCBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.messageRTB = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -55,22 +55,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // userCBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Project";
-            // 
-            // projectsCBox
-            // 
-            this.projectsCBox.FormattingEnabled = true;
-            this.projectsCBox.Location = new System.Drawing.Point(6, 32);
-            this.projectsCBox.Name = "projectsCBox";
-            this.projectsCBox.Size = new System.Drawing.Size(235, 21);
-            this.projectsCBox.TabIndex = 1;
+            this.userCBox.FormattingEnabled = true;
+            this.userCBox.Location = new System.Drawing.Point(250, 32);
+            this.userCBox.Name = "userCBox";
+            this.userCBox.Size = new System.Drawing.Size(235, 21);
+            this.userCBox.TabIndex = 3;
+            this.userCBox.SelectedIndexChanged += new System.EventHandler(this.userCBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -81,13 +73,23 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "User";
             // 
-            // userCBox
+            // projectsCBox
             // 
-            this.userCBox.FormattingEnabled = true;
-            this.userCBox.Location = new System.Drawing.Point(250, 32);
-            this.userCBox.Name = "userCBox";
-            this.userCBox.Size = new System.Drawing.Size(235, 21);
-            this.userCBox.TabIndex = 3;
+            this.projectsCBox.FormattingEnabled = true;
+            this.projectsCBox.Location = new System.Drawing.Point(6, 32);
+            this.projectsCBox.Name = "projectsCBox";
+            this.projectsCBox.Size = new System.Drawing.Size(235, 21);
+            this.projectsCBox.TabIndex = 1;
+            this.projectsCBox.SelectedIndexChanged += new System.EventHandler(this.projectsCBox_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Project";
             // 
             // groupBox2
             // 
@@ -133,6 +135,7 @@
             this.sendBtn.TabIndex = 3;
             this.sendBtn.Text = "Send";
             this.sendBtn.UseVisualStyleBackColor = true;
+            this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
             // ChatForm
             // 
@@ -145,6 +148,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ChatForm";
             this.Text = "Chat";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChatForm_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

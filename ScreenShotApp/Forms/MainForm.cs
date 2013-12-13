@@ -41,5 +41,11 @@ namespace ScreenShotApp.Forms
                 _isStarted = false;
             }
         }
+
+        private void chatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var chatForm = new ChatForm();
+            chatForm.Show();
+        }
     }
 }

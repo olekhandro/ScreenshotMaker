@@ -11,6 +11,8 @@ namespace ScreenshotMakerLibrary.Domain
         public User User { get; set; }
         public Project Project { get; set; }
 
+        public string SavedPath { get; set; }
+
         public byte[] Data { get; set; }
         public DateTime CreationTime { get; set; }
 

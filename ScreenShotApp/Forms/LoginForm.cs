@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.IO;
+using System.Windows.Forms;
 using ScreenshotMakerLibrary.Domain;
 
 namespace ScreenShotApp.Forms
@@ -23,6 +24,12 @@ namespace ScreenShotApp.Forms
                 {
                     Program.CurrentUser = user;
                     DialogResult= DialogResult.OK;
+                    var directory = new DirectoryInfo(Application.StartupPath + @"\History\" + user.Username);
+                    if (!directory.Exists)
+                    {
+                        directory.Create();
+                    }
+                    Program.CurrentHistoryDirectory = directory.FullName;
                 }
             }
         }

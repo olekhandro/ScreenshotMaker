@@ -4,8 +4,7 @@
     <id name="Id" unsaved-value="0" type="long" column="screenshot_id">
       <generator class="identity" />
     </id>
-
-    <property name="Data" column="data" not-null="true"></property>
+    <property name="SavedPath" column="saved_path" not-null="true"></property>
     <property name="CreationTime" column="creation_time" not-null="true"></property>
     <many-to-one name="User" column="user_id" class="ScreenshotMakerLibrary.Domain.User, ScreenshotMakerLibrary" />
     <many-to-one name="Project" column="project_id" class="ScreenshotMakerLibrary.Domain.Project, ScreenshotMakerLibrary"  />

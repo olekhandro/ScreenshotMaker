@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 using ScreenshotMakerLibrary.Domain;
@@ -53,8 +54,14 @@ namespace ScreenshotMakerLibrary
                 screenshotEntity.Project = CurrentProject;
                 screenshotEntity.User = CurrentUser;
                 LastSavedScreenshot = screenshot;
-                screenshot.Save(Application.StartupPath+@"\"+DateTime.Now.Year+DateTime.Now.Month+DateTime.Now.Day+
-                    DateTime.Now.Hour+DateTime.Now.Minute+".jpg", ImageFormat.Jpeg);
+                string filename = Application.StartupPath + @"\" + DateTime.Now.Year + DateTime.Now.Month +
+                                  DateTime.Now.Day +
+                                  DateTime.Now.Hour + DateTime.Now.Minute + ".jpg";
+                screenshot.Save(filename, ImageFormat.Jpeg);
+                FTPManager.UploadFile(CurrentUser, filename);
+                var fileInfo = new FileInfo(filename);
+                fileInfo.Delete();
+                screenshotEntity.SavedPath = filename;
                 CurrentBroker.Save(screenshotEntity);
                 OnScreenshotUploaded(null, EventArgs.Empty);
             } 

@@ -37,6 +37,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="MySQL">
+      <HintPath>..\Libs\MySQL.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -104,6 +111,11 @@
       <Project>{154D6FF1-C210-4C28-8D42-23668BC51550}</Project>
       <Name>ScreenshotMakerLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="History\Readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

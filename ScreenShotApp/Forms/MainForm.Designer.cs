@@ -34,12 +34,15 @@
             this.projectsCBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.screenshotPictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.screenshotTakingTimeLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MainMenu = new System.Windows.Forms.MenuStrip();
+            this.chatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.screenshotPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenshotPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +60,7 @@
             // 
             this.groupBox1.Controls.Add(this.startBtn);
             this.groupBox1.Controls.Add(this.projectsCBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 145);
+            this.groupBox1.Location = new System.Drawing.Point(6, 160);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(446, 77);
             this.groupBox1.TabIndex = 1;
@@ -85,7 +88,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.usernameLbl);
-            this.groupBox2.Location = new System.Drawing.Point(18, 12);
+            this.groupBox2.Location = new System.Drawing.Point(12, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(257, 127);
             this.groupBox2.TabIndex = 2;
@@ -94,24 +97,23 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.screenshotPictureBox);
             this.groupBox3.Controls.Add(this.screenshotTakingTimeLbl);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.screenshotPictureBox);
-            this.groupBox3.Location = new System.Drawing.Point(281, 12);
+            this.groupBox3.Location = new System.Drawing.Point(275, 27);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(177, 127);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Last screenshot";
             // 
-            // screenshotPictureBox
+            // screenshotTakingTimeLbl
             // 
-            this.screenshotPictureBox.Location = new System.Drawing.Point(6, 16);
-            this.screenshotPictureBox.Name = "screenshotPictureBox";
-            this.screenshotPictureBox.Size = new System.Drawing.Size(160, 90);
-            this.screenshotPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.screenshotPictureBox.TabIndex = 0;
-            this.screenshotPictureBox.TabStop = false;
+            this.screenshotTakingTimeLbl.AutoSize = true;
+            this.screenshotTakingTimeLbl.Location = new System.Drawing.Point(59, 109);
+            this.screenshotTakingTimeLbl.Name = "screenshotTakingTimeLbl";
+            this.screenshotTakingTimeLbl.Size = new System.Drawing.Size(0, 13);
+            this.screenshotTakingTimeLbl.TabIndex = 2;
             // 
             // label1
             // 
@@ -122,22 +124,40 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Taken at:";
             // 
-            // screenshotTakingTimeLbl
+            // MainMenu
             // 
-            this.screenshotTakingTimeLbl.AutoSize = true;
-            this.screenshotTakingTimeLbl.Location = new System.Drawing.Point(59, 109);
-            this.screenshotTakingTimeLbl.Name = "screenshotTakingTimeLbl";
-            this.screenshotTakingTimeLbl.Size = new System.Drawing.Size(0, 13);
-            this.screenshotTakingTimeLbl.TabIndex = 2;
+            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chatToolStripMenuItem});
+            this.MainMenu.Location = new System.Drawing.Point(0, 0);
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Size = new System.Drawing.Size(469, 24);
+            this.MainMenu.TabIndex = 4;
+            // 
+            // chatToolStripMenuItem
+            // 
+            this.chatToolStripMenuItem.Name = "chatToolStripMenuItem";
+            this.chatToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.chatToolStripMenuItem.Text = "Chat";
+            this.chatToolStripMenuItem.Click += new System.EventHandler(this.chatToolStripMenuItem_Click);
+            // 
+            // screenshotPictureBox
+            // 
+            this.screenshotPictureBox.Location = new System.Drawing.Point(9, 16);
+            this.screenshotPictureBox.Name = "screenshotPictureBox";
+            this.screenshotPictureBox.Size = new System.Drawing.Size(157, 90);
+            this.screenshotPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.screenshotPictureBox.TabIndex = 3;
+            this.screenshotPictureBox.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 234);
+            this.ClientSize = new System.Drawing.Size(469, 243);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.MainMenu);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
@@ -146,8 +166,11 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.MainMenu.ResumeLayout(false);
+            this.MainMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenshotPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -161,7 +184,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label screenshotTakingTimeLbl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.PictureBox screenshotPictureBox;
+        private System.Windows.Forms.ToolStripMenuItem chatToolStripMenuItem;
     }
 }
 

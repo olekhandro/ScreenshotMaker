@@ -63,6 +63,7 @@
     <Compile Include="ConnectionOptions.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="Domain\Identifiable.cs" />
+    <Compile Include="Domain\Message.cs" />
     <Compile Include="Domain\Project.cs" />
     <Compile Include="Domain\Screenshot.cs" />
     <Compile Include="FTPManager.cs" />
@@ -83,6 +84,9 @@
     <EmbeddedResource Include="Mappings\Screenshot.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Message.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

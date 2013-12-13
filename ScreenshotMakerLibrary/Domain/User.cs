@@ -23,5 +23,10 @@ namespace ScreenshotMakerLibrary.Domain
         protected User()
         {
         }
+
+        public override string ToString()
+        {
+            return Username;
+        }
     }
 }

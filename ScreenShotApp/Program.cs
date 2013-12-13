@@ -13,6 +13,8 @@ namespace ScreenShotApp
     {
         public static MySQLBroker MySqlBroker { get; set; }
 
+        public static string CurrentHistoryDirectory { get; set; }
+
         public static User CurrentUser { get; set; }
 
         /// <summary>

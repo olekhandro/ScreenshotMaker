@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class table="jobstask_chatmessages" name="ScreenshotMakerLibrary.Domain.Message, ScreenshotMakerLibrary" lazy="false">
+    <id name="Id" unsaved-value="0" type="long" column="message_id">
+      <generator class="identity" />
+    </id>
+    <property name="Text" column="text" not-null="true"></property>
+    <property name="SendTime" column="send_time" not-null="true"></property>
+    <many-to-one name="Sender" column="sender_id" class="ScreenshotMakerLibrary.Domain.User, ScreenshotMakerLibrary" />
+    <many-to-one name="Receiver" column="receiver_id" class="ScreenshotMakerLibrary.Domain.User, ScreenshotMakerLibrary" />
+  </class>
+</hibernate-mapping>
