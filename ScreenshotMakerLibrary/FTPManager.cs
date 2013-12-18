@@ -13,7 +13,7 @@ namespace ScreenshotMakerLibrary
         private const string SCREENSHOTPATH = "/Screenshots";
         private const string LOGIN = "screenshot@outforced.com";
         private const string PASSWORD = "WVhMF8w7S0";
-        private const int TIMEOUTFTP = 30000;
+        private const int TIMEOUTFTP = 120000;
 
         public static string UploadFile(User user, string filename)
         {
@@ -27,7 +27,7 @@ namespace ScreenshotMakerLibrary
                 SCREENSHOTPATH + @"/" + user.Username + @"/" + filename.Substring(filename.LastIndexOf(@"\")+1),
                 filename);
             client.Disconnect(TIMEOUTFTP);
-            return SCREENSHOTPATH + @"/" + user.Username + @"/" + filename.Substring(filename.LastIndexOf(@"\"));
+            return SCREENSHOTPATH + @"/" + user.Username + @"/" + filename.Substring(filename.LastIndexOf(@"\")+1);
         }
 
         public static FtpClient ConnectToServer()

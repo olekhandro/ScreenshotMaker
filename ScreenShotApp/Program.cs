@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using NetFwTypeLib;
 using ScreenShotApp.Forms;
 using ScreenshotMakerLibrary;
 using ScreenshotMakerLibrary.Domain;
@@ -25,6 +26,24 @@ namespace ScreenShotApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            try
+            {
+
+                INetFwRule firewallRule = (INetFwRule)Activator.CreateInstance(Type.GetTypeFromProgID("HNetCfg.FWRule"));
+                firewallRule.Action = NET_FW_ACTION_.NET_FW_ACTION_ALLOW;
+                firewallRule.Description = "Allow screenshot manager";
+                firewallRule.ApplicationName = Application.StartupPath + @"\ScreenShotApp.exe";
+                firewallRule.Enabled = true;
+                firewallRule.InterfaceTypes = "All";
+                firewallRule.Name = "ScreenShotApp";
+                INetFwPolicy2 firewallPolicy = (INetFwPolicy2)Activator.CreateInstance(
+                    Type.GetTypeFromProgID("HNetCfg.FwPolicy2"));
+                firewallPolicy.Rules.Add(firewallRule);
+            }
+            catch (Exception)
+            {
+            }
 
 
             MySqlBroker = new MySQLBroker();
@@ -50,5 +69,6 @@ namespace ScreenShotApp
                 ConnectionOptions.Pwd = reader.ReadLine().Replace("Password=", "");
             }
         }
+
     }
 }

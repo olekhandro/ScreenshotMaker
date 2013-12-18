@@ -34,16 +34,16 @@
             this.projectsCBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.screenshotPictureBox = new System.Windows.Forms.PictureBox();
             this.screenshotTakingTimeLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.chatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.screenshotPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenshotPictureBox)).BeginInit();
+            this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // usernameLbl
@@ -107,6 +107,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Last screenshot";
             // 
+            // screenshotPictureBox
+            // 
+            this.screenshotPictureBox.Location = new System.Drawing.Point(9, 16);
+            this.screenshotPictureBox.Name = "screenshotPictureBox";
+            this.screenshotPictureBox.Size = new System.Drawing.Size(157, 90);
+            this.screenshotPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.screenshotPictureBox.TabIndex = 3;
+            this.screenshotPictureBox.TabStop = false;
+            // 
             // screenshotTakingTimeLbl
             // 
             this.screenshotTakingTimeLbl.AutoSize = true;
@@ -140,15 +149,6 @@
             this.chatToolStripMenuItem.Text = "Chat";
             this.chatToolStripMenuItem.Click += new System.EventHandler(this.chatToolStripMenuItem_Click);
             // 
-            // screenshotPictureBox
-            // 
-            this.screenshotPictureBox.Location = new System.Drawing.Point(9, 16);
-            this.screenshotPictureBox.Name = "screenshotPictureBox";
-            this.screenshotPictureBox.Size = new System.Drawing.Size(157, 90);
-            this.screenshotPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.screenshotPictureBox.TabIndex = 3;
-            this.screenshotPictureBox.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,9 +166,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.screenshotPictureBox)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.screenshotPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -46,24 +46,33 @@ namespace ScreenshotMakerLibrary
             var random = new Random();
             while (true)
             {
-                var minutes = random.Next(MINWAITINTERVALINMINUTES, MAXWAITINTERVALINMINUTES);
-                Thread.Sleep(minutes * 60 * 100);
-                var screenshot = GetScreenShot();
-                var screenshotEntity = new Screenshot(screenshot);
-                screenshotEntity.CreationTime = DateTime.UtcNow;
-                screenshotEntity.Project = CurrentProject;
-                screenshotEntity.User = CurrentUser;
-                LastSavedScreenshot = screenshot;
-                string filename = Application.StartupPath + @"\" + DateTime.Now.Year + DateTime.Now.Month +
-                                  DateTime.Now.Day +
-                                  DateTime.Now.Hour + DateTime.Now.Minute + ".jpg";
-                screenshot.Save(filename, ImageFormat.Jpeg);
-                FTPManager.UploadFile(CurrentUser, filename);
-                var fileInfo = new FileInfo(filename);
-                fileInfo.Delete();
-                screenshotEntity.SavedPath = filename;
-                CurrentBroker.Save(screenshotEntity);
-                OnScreenshotUploaded(null, EventArgs.Empty);
+                try
+                {
+                    var minutes = random.Next(MINWAITINTERVALINMINUTES, MAXWAITINTERVALINMINUTES);
+                    Thread.Sleep(minutes * 60 * 100);
+                    var screenshot = GetScreenShot();
+                    var screenshotEntity = new Screenshot(screenshot);
+                    screenshotEntity.CreationTime = DateTime.UtcNow;
+                    screenshotEntity.Project = CurrentProject;
+                    screenshotEntity.User = CurrentUser;
+                    LastSavedScreenshot = screenshot;
+                    string filename = Application.StartupPath + @"\" + DateTime.Now.Year + DateTime.Now.Month +
+                                      DateTime.Now.Day +
+                                      DateTime.Now.Hour + DateTime.Now.Minute + ".jpg";
+                    screenshot.Save(filename, ImageFormat.Jpeg);
+                    var savedPath = FTPManager.UploadFile(CurrentUser, filename);
+                    var fileInfo = new FileInfo(filename);
+                    fileInfo.Delete();
+                    screenshotEntity.SavedPath = savedPath;
+                    CurrentBroker.Save(screenshotEntity);
+                    OnScreenshotUploaded(null, EventArgs.Empty);
+                }
+                catch (Exception ex)
+                {
+                    var writer = new StreamWriter(Application.StartupPath + @"\log.txt");
+                    writer.Write(ex.ToString());
+                    writer.Close();
+                }
             } 
         }
 
