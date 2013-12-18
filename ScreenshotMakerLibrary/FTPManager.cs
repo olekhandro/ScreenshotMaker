@@ -9,10 +9,10 @@ namespace ScreenshotMakerLibrary
 {
     public class FTPManager
     {
-        private const string FTPADDRESS = "ftp.outforced.com";
-        private const string SCREENSHOTPATH = "/Screenshots";
-        private const string LOGIN = "screenshot@outforced.com";
-        private const string PASSWORD = "WVhMF8w7S0";
+        private const string FTPADDRESS = "ftp.screenshot.mdei.info";
+        private const string SCREENSHOTPATH = "";
+        private const string LOGIN = "timer@screenshot.mdei.info";
+        private const string PASSWORD = "screenshot123";
         private const int TIMEOUTFTP = 120000;
 
         public static string UploadFile(User user, string filename)
